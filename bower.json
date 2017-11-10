@@ -1,0 +1,25 @@
+{
+  "name": "ng-loading-wrapper",
+  "homepage": "https://github.com/ckarumoreira/ng-loading-wrapper",
+  "authors": [
+    "Carlos Moreira <ckarumoreira@gmail.com>"
+  ],
+  "description": "AngularJS component to apply loading to specific elements.",
+  "main": "index.js",
+  "keywords": [
+    "angularjs",
+    "loading",
+    "wrapper"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.6.6"
+  }
+}
