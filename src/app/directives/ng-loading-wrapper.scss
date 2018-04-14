@@ -2,16 +2,21 @@
     position: relative;
     
     .loading-pane {
+        transition: background .2s;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(23, 23, 23, 0.6);
-        
+        background: transparent;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &.show {
+            background: rgba(23, 23, 23, 0.6);
+        }
 
         .loading-object {
             

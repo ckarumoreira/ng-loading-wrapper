@@ -1,6 +1,6 @@
 (function () {
   angular.module('ng-loading-wrapper.services')
-    .service('ngLoadingWrapper', [ '$compile', 
+    .service('ngLoadingWrapper', [ '$compile', '$timeout',
       function ($compile) {
         var self = this;
 
@@ -19,13 +19,23 @@
           pane.append(object);
           target.append(pane);
           console.log("ngLoadingWrapper appended loading element.");
+
+          $timeout(function () {
+            pane.addClass('show');
+          }, 200);
         };
 
         this.remove = function (element) {
           var target = angular.element(element);
-          target.removeClass('ng-loading-wrapper');
-          target.find('.loading-pane').remove();
+          var pane = target.find('.loading-pane');
+          pane.removeClass('show');
+          
           console.log("ngLoadingWrapper remove loading element.");
+
+          $timeout(function () {
+            target.removeClass('ng-loading-wrapper');
+            pane.remove();
+          }, 200);
         };
       }
     ])
