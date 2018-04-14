@@ -1,5 +1,5 @@
 (function () {
-  angular.module('ng-loading-wrapper.services').service('ngLoadingWrapper', [function ($scope) {
+  angular.module('ng-loading-wrapper.services').service('ngLoadingWrapper', [function () {
     var self = this;
 
     this.applyLoading = function (element) {
