@@ -1,1 +1,1 @@
-angular.module('ng-loading-wrapper.directives').run(['$templateCache', function($templateCache) {$templateCache.put('directives/ng-loading-wrapper.template.html','<ng-transclude></ng-transclude><div class="loading-pane" ng-if="ctrl.isLoading"><div class="loading-object"><div class="loading-spinner"></div><div class="loading-text" ng-bind="ctrl.loadingText"></div></div></div>');}]);
+angular.module('ng-loading-wrapper.directives').run(['$templateCache', function($templateCache) {$templateCache.put('directives/ng-loading-wrapper.template.html','');}]);

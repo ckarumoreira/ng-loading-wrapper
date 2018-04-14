@@ -11,11 +11,9 @@
             var spinner = angular.element('<div class="loading-spinner"></div>');
             var text = angular.element('<div class="loading-text">' + attrs.loadingText + '</div>');
 
-            object
-                .append(spinner)
-                .append(text);
+            object.append(spinner).append(text);
             pane.append(object);
-            
+
             target.append(target);
 
             scope.$on('$destroy', function () {
