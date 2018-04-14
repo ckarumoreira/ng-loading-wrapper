@@ -2,7 +2,7 @@
   angular.module('ng-loading-wrapper.services').service('ngLoadingWrapper', ['$compile', function ($compile) {
     var self = this;
 
-    this.applyLoading = function (element, loadingText) {
+    this.apply = function (element, loadingText) {
       var target = angular.element(element);
       target.addClass('ng-loading-wrapper');
 
@@ -19,18 +19,11 @@
       console.log("ngLoadingWrapper appended loading element.");
     };
 
-    this.removeLoading = function (element) {
+    this.remove = function (element) {
       var target = angular.element(element);
       target.removeClass('ng-loading-wrapper');
       target.find('.loading-pane').remove();
       console.log("ngLoadingWrapper remove loading element.");
-    };
-
-    this.loadWhile = function (element, promise) {
-      self.applyLoading(element);
-      Promise.all(promise).finally(function () {
-        self.removeLoading(element);
-      });
     };
   }]);
 })();
