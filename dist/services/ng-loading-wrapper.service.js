@@ -8,14 +8,14 @@
 
       var pane = angular.element('<div class="loading-pane"></div>');
       var object = angular.element('<div class="loading-object"></div>');
-      var spinner = angular.element('<div class="loading-spinner"></div>');
-      var text = angular.element('<div class="loading-text">' + loadingText + '</div>');
 
-      object.append(spinner).append(text);
+      object.append('<div class="loading-spinner"></div>');
+      if (angular.isDefined(loadingText)) {
+        object.append('<div class="loading-text">' + loadingText + '</div>');
+      }
+
       pane.append(object);
-
       target.append(pane);
-
       console.log("ngLoadingWrapper appended loading element.");
     };
 
