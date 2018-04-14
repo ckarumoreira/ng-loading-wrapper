@@ -2,7 +2,7 @@
     angular.module('ng-loading-wrapper.directives')
     .directive('ngLoadingWrapper', {
         restrict: 'C',
-        link: function (scope, element, attrs, controller, transclude) {
+        link: function ($scope, element, attrs, controller, transclude) {
             console.log("ngLoadingWrapper appended loading element.");
 
             var target = angular.element(element);
@@ -19,7 +19,7 @@
             
             target.append(target);
 
-            scope.$on('$destroy', function () {
+            $scope.$on('$destroy', function () {
                 pane.remove();
                 console.log("ngLoadingWrapper remove loading element.");
             });
