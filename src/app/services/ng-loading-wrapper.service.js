@@ -1,7 +1,7 @@
 (function () {
   angular.module('ng-loading-wrapper.services')
     .service('ngLoadingWrapper', [ '$compile', '$timeout',
-      function ($compile) {
+      function ($compile, $timeout) {
         var self = this;
 
         this.apply = function (element, loadingText) {

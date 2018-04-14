@@ -1,5 +1,5 @@
 (function () {
-  angular.module('ng-loading-wrapper.services').service('ngLoadingWrapper', ['$compile', '$timeout', function ($compile) {
+  angular.module('ng-loading-wrapper.services').service('ngLoadingWrapper', ['$compile', '$timeout', function ($compile, $timeout) {
     var self = this;
 
     this.apply = function (element, loadingText) {
