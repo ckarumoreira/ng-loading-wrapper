@@ -4,14 +4,14 @@
       function ($compile) {
         var self = this;
 
-        this.applyLoading = function (element) {
+        this.applyLoading = function (element, loadingText) {
           var target = angular.element(element);
           target.addClass('ng-loading-wrapper');
 
           var pane = angular.element('<div class="loading-pane"></div>');
           var object = angular.element('<div class="loading-object"></div>');
           var spinner = angular.element('<div class="loading-spinner"></div>');
-          var text = angular.element('<div class="loading-text">' + attrs.loadingText + '</div>');
+          var text = angular.element('<div class="loading-text">' + loadingText + '</div>');
 
           object
             .append(spinner)
