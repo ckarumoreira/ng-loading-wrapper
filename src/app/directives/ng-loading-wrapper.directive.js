@@ -1,6 +1,6 @@
 (function () {
     angular.module('ng-loading-wrapper.directives')
-    .directive('ngLoadingWrapper', function () {
+    .directive('ngLoadingWrapper', [ '$scope', function ($scope) {
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
@@ -26,5 +26,5 @@
                 });
             }
         };
-    });
+    }]);
 })();
