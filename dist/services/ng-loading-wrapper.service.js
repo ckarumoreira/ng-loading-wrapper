@@ -14,7 +14,7 @@
       object.append(spinner).append(text);
       pane.append(object);
 
-      target.append(target);
+      target.append(pane);
 
       console.log("ngLoadingWrapper appended loading element.");
     };
