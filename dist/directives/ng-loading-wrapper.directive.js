@@ -1,5 +1,5 @@
 (function () {
-    angular.module('ng-loading-wrapper.directives').directive('ngLoadingWrapper', ['$compile', function ($compile) {
+    angular.module('ng-loading-wrapper.directives').directive('ngLoadingWrapper', [function () {
         return {
             restrict: 'C',
             link: function (scope, element, attrs) {
@@ -16,8 +16,6 @@
                 pane.append(object);
 
                 target.append(target);
-
-                $compile(target)(scope);
 
                 scope.$on('$destroy', function () {
                     pane.remove();

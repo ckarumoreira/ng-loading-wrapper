@@ -1,15 +1,19 @@
 (function () {
   angular.module('ng-loading-wrapper.services')
-    .service('ngLoadingWrapper', [
-      function () {
+    .service('ngLoadingWrapper', [ '$compile', 
+      function ($compile) {
         var self = this;
 
         this.applyLoading = function (element) {
-          angular.element(element).addClass('ng-loading-wrapper');
+          var target = angular.element(element);
+          target.addClass('ng-loading-wrapper');
+          $compile(target)(target.scope());
         };
 
         this.removeLoading = function (element) {
-          angular.element(element).removeClass('ng-loading-wrapper');
+          var target = angular.element(element);
+          target.removeClass('ng-loading-wrapper');
+          $compile(target)(target.scope());
         };
 
         this.loadWhile = function (element, promise) {
