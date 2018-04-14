@@ -1,1 +1,0 @@
-angular.module('ng-loading-wrapper.directives').run(['$templateCache', function($templateCache) {$templateCache.put('directives/ng-loading-wrapper.template.html','');}]);
