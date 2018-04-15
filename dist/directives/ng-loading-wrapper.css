@@ -1,18 +1,19 @@
 .ng-loading-wrapper {
   position: relative; }
   .ng-loading-wrapper .loading-pane {
-    transition: background .2s;
+    transition: opacity .1s;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: transparent;
+    background: rgba(23, 23, 23, 0.6);
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center; }
     .ng-loading-wrapper .loading-pane.show {
-      background: rgba(23, 23, 23, 0.6); }
+      opacity: 1; }
     .ng-loading-wrapper .loading-pane .loading-object .loading-spinner {
       width: 45px;
       height: 45px;
